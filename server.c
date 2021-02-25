@@ -72,7 +72,7 @@ int main(int argc, char** argv)
     for (;;) 
     {
         puts("[Waiting for incoming connections....]");
-        int client_sock = accept(server_fd, (struct sockaddr*)&client, (socklen_t*)sizeof(struct sockaddr_in));
+        int client_sock = accept(server_fd, (struct sockaddr*)client, (socklen_t*)sizeof(struct sockaddr_in));
         if (client_sock == -1) 
         {
             perror("Couldn't establish a connection with the client");
